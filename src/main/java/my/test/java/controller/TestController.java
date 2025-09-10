@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -14,6 +15,22 @@ public class TestController {
     @GetMapping("/string")
     public String getString(){
         return "OK";
+    }
+
+    @GetMapping("/string-with-response-entity")
+    public ResponseEntity<String> getStringWithResponseEntity(){
+        return ResponseEntity.ok().body("OK");
+    }
+
+    @GetMapping("/list/string")
+    public ArrayList<String> getListString(){
+        ArrayList<String> response = new ArrayList<>();
+        response.add("data1");
+        response.add("data2");
+        response.add("data3");
+        response.add("data4");
+        response.add("data5");
+        return response;
     }
 
     @GetMapping("/client-error/400")
