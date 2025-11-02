@@ -20,7 +20,7 @@
 # Run Database
 - MySQL
 ```
-docker run --name my-local-mysql -v /Volumes/T7/DockerVolume/MyMySQLVolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:lts
+docker run --name my-local-mysql -v my-local-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:lts
 
 docker start my-local-mysql
 ```
