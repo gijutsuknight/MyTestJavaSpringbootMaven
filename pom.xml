@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>my.test</groupId>
 	<artifactId>java</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>MyTestJavaSpringbootMaven</name>
 	<description>Demo project for Spring Boot by Maven</description>
 	<url/>
